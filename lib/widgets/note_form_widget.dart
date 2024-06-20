@@ -9,7 +9,7 @@ class NoteFormWidget extends StatelessWidget {
       required this.description,
       required this.onChangeIsImportant,
       required this.onChangeNumber,
-      required this.onChangeTitle,
+    required this.onChangeTitle,
       required this.onChangeDescription});
   final bool isImportant;
   final int number;
@@ -37,7 +37,16 @@ class NoteFormWidget extends StatelessWidget {
                   max: 5,
                   divisions: 5,
                   onChanged: (value) => onChangeNumber(value.toInt()),
-                ))
+                )),
+                const SizedBox(width: 8), // Jarak antara input dan teks statis
+                const Text(
+                  'mg/dL',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey,
+                  ),
+                ),
               ],
             ),
             _buildTitleField(),

@@ -47,13 +47,6 @@ class _NotetakerPageState extends State<NotetakerPage> {
         floatingActionButton: FloatingActionButton(
             child: const Icon(Icons.add),
             onPressed: () async {
-              // final notataker = Notetaker(
-              // isImportant: false,
-              // number: 1,
-              // title: 'Title Test',
-              // description: 'Description Test',
-              // createdTime: DateTime.now());
-              // await NotetakerDatabase.instance.create(notataker);
               await Navigator.push(
                   context,
                   MaterialPageRoute(
